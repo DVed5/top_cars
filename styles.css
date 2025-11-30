@@ -818,6 +818,7 @@ button {
 .faq__question i {
 	font-size: 14px;
 	transition: transform var(--transition-fast);
+	margin-left: 10px;
 }
 
 .faq__item--open .faq__question i {
@@ -1114,11 +1115,6 @@ button {
 	.header__socials a {
 		width: 36px;
 		height: 36px;
-		border-color: var(--accent);
-	}
-
-	.header__burger {
-		border-color: var(--accent);
 	}
 
 	.header__burger svg {
