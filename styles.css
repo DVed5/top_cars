@@ -1022,6 +1022,12 @@ button {
 }
 
 @media (max-width: 880px) {
+
+	.btn--outline,
+	.car-card__btn {
+		border-color: var(--accent);
+	}
+
 	.header__inner {
 		gap: 6px;
 	}
@@ -1105,6 +1111,20 @@ button {
 }
 
 @media (max-width: 640px) {
+	.header__socials a {
+		width: 36px;
+		height: 36px;
+		border-color: var(--accent);
+	}
+
+	.header__burger {
+		border-color: var(--accent);
+	}
+
+	.header__burger svg {
+		width: 37px;
+		height: 36px;
+	}
 
 	.section {
 		padding: 56px 0;
@@ -1126,7 +1146,7 @@ button {
 		gap: 26px;
 	}
 
-	.faq__question{
+	.faq__question {
 		text-align: left;
 	}
 
