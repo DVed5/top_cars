@@ -1056,6 +1056,13 @@ button {
 		font-size: 15px;
 	}
 
+	.header__burger svg {
+		width: 40px;
+		height: 34px;
+		display: block;
+		padding: 4px;
+	}
+
 	.header__contacts {
 		margin-left: auto;
 	}
