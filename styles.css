@@ -1042,15 +1042,12 @@ button {
 	}
 
 	.header__burger {
-		display: inline-flex !important;
+		display: block;
 		margin-left: 4px;
-		position: relative;
-		z-index: 9999;
+		/* position: relative;
+		z-index: 9999; */
 	}
 
-	.header__burger span {
-		background: #fff !important;
-	}
 
 	.hero {
 		padding-top: 88px;
