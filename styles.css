@@ -1023,9 +1023,16 @@ button {
 }
 
 @media (max-width: 880px) {
+	.btn--ghost {
+		background: radial-gradient(circle at top left,
+				rgba(255, 255, 255, 0.12),
+				transparent 70%);
+		border: 1px solid rgba(255, 255, 255, 0.15);
+		color: var(--text-main);
+		backdrop-filter: blur(4px);
+	}
 
-	.btn--outline,
-	.car-card__btn {
+	.btn--outline {
 		border-color: var(--accent);
 	}
 
