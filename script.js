@@ -1,29 +1,51 @@
 
 // Бургер-меню и якоря
 document.addEventListener("DOMContentLoaded", () => {
-	const header = document.querySelector(".header");
-	const burger = document.querySelector(".header__burger");
-	const navLinks = document.querySelectorAll(".header__menu a");
+    const header = document.querySelector(".header");
+    const burger = document.querySelector(".header__burger");
+    const menu = document.querySelector(".header__menu");
+    const navLinks = document.querySelectorAll(".header__menu a");
 
-	if (burger) {
-		burger.addEventListener("click", () => {
-			header.classList.toggle("header--nav-open");
-		});
-	}
+    // Открытие / закрытие по бургеру
+    burger.addEventListener("click", () => {
+        header.classList.toggle("header--nav-open");
+    });
 
-	navLinks.forEach((link) => {
-		link.addEventListener("click", (e) => {
-			const href = link.getAttribute("href");
-			if (href && href.startsWith("#")) {
-				e.preventDefault();
-				const target = document.querySelector(href);
-				if (target) {
-					target.scrollIntoView({ behavior: "smooth", block: "start" });
-				}
-				header.classList.remove("header--nav-open");
-			}
-		});
-	});
+    // Закрытие меню при клике на ссылку
+    navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+            header.classList.remove("header--nav-open");
+            document.body.classList.remove("no-scroll");
+        });
+    });
+
+    // ⭐ Закрытие при клике вне меню
+    document.addEventListener("click", (e) => {
+        const clickInsideMenu = menu.contains(e.target);
+        const clickOnBurger = burger.contains(e.target);
+
+        if (!clickInsideMenu && !clickOnBurger) {
+            header.classList.remove("header--nav-open");
+            document.body.classList.remove("no-scroll");
+        }
+    });
+
+    // ⭐ Закрытие при свайпе вверх (мобильный UX)
+    let touchStartY = 0;
+
+    window.addEventListener("touchstart", (e) => {
+        touchStartY = e.touches[0].clientY;
+    });
+
+    window.addEventListener("touchmove", (e) => {
+        const diff = e.touches[0].clientY - touchStartY;
+        if (diff < -60) { // свайп вверх
+            header.classList.remove("header--nav-open");
+            document.body.classList.remove("no-scroll");
+        }
+    });
+
+
 
 	// Кнопки, которые скроллят к квизу
 	const quizButtons = document.querySelectorAll('a[href="#quiz"], .scroll-to-quiz');

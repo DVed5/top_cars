@@ -181,17 +181,23 @@ button {
 	border-color: rgba(255, 255, 255, 0.2);
 }
 
-.header--nav-open .header__burger span:nth-child(1) {
-	transform: translateY(5px) rotate(45deg);
+.burger-icon .line {
+	transition: transform .35s ease, opacity .25s ease;
+	transform-origin: center;
 }
 
-.header--nav-open .header__burger span:nth-child(2) {
+.header--nav-open .line1 {
+	transform: rotate(45deg) translate(4px, 4px);
+}
+
+.header--nav-open .line2 {
 	opacity: 0;
 }
 
-.header--nav-open .header__burger span:nth-child(3) {
-	transform: translateY(-5px) rotate(-45deg);
+.header--nav-open .line3 {
+	transform: rotate(-45deg) translate(4px, -4px);
 }
+
 
 .btn {
 	display: inline-flex;
@@ -1133,7 +1139,7 @@ button {
 	}
 
 	.section {
-		padding: 75px 0 55px;
+		padding: 85px 0 30px;
 	}
 
 	.hero {
