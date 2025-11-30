@@ -29,6 +29,11 @@
 	box-sizing: border-box;
 }
 
+html,
+body {
+	overflow-x: hidden;
+}
+
 html {
 	scroll-behavior: smooth;
 }
@@ -1220,9 +1225,4 @@ button {
 	.header__logo {
 		display: none;
 	}
-}
-
-
-html, body {
-    overflow-x: hidden;
 }

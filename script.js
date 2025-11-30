@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // ⭐ Закрытие при клике вне меню
+    // Закрытие при клике вне меню
     document.addEventListener("click", (e) => {
         const clickInsideMenu = menu.contains(e.target);
         const clickOnBurger = burger.contains(e.target);
@@ -29,22 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
             document.body.classList.remove("no-scroll");
         }
     });
-
-    // ⭐ Закрытие при свайпе вверх (мобильный UX)
-    let touchStartY = 0;
-
-    window.addEventListener("touchstart", (e) => {
-        touchStartY = e.touches[0].clientY;
-    });
-
-    window.addEventListener("touchmove", (e) => {
-        const diff = e.touches[0].clientY - touchStartY;
-        if (diff < -60) { // свайп вверх
-            header.classList.remove("header--nav-open");
-            document.body.classList.remove("no-scroll");
-        }
-    });
-
 
 
 	// Кнопки, которые скроллят к квизу
