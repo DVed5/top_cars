@@ -1042,8 +1042,10 @@ button {
 	}
 
 	.header__burger {
-		display: inline-flex;
+		display: inline-flex !important;
 		margin-left: 4px;
+		position: relative;
+		z-index: 9999;
 	}
 
 	.header__burger span {
