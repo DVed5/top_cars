@@ -1126,6 +1126,10 @@ button {
 		gap: 26px;
 	}
 
+	.faq__question{
+		text-align: left;
+	}
+
 	.footer__inner {
 		flex-direction: column;
 		align-items: flex-start;
