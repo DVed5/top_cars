@@ -1137,11 +1137,6 @@ button {
 
 @media (max-width: 485px) {
 
-	.header__burger {
-		width: 35px;
-		height: 28px;
-	}
-
 	.btn--primary {
 		font-size: 13px;
 	}
