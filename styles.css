@@ -1126,6 +1126,10 @@ button {
 		padding: 0 44px;
 	}
 
+	.hero__image {
+		min-height: 230px;
+	}
+
 	.cards--3 {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
@@ -1212,7 +1216,7 @@ button {
 	}
 
 	.card {
-		padding: 15px;
+		padding: 25px 15px;
 	}
 
 	.card__title {
@@ -1221,6 +1225,8 @@ button {
 
 	.card__text {
 		font-size: 13px;
+		width: 85%;
+		margin: 0 auto;
 	}
 
 	.timeline__text {
