@@ -1029,6 +1029,22 @@ button {
 }
 
 @media (max-width: 880px) {
+
+	.reveal-left,
+	.reveal-right {
+		opacity: 0;
+		transform: scale(0.96);
+		transition:
+			opacity .6s cubic-bezier(.22, 1, .36, 1),
+			transform .8s cubic-bezier(.22, 1, .36, 1);
+	}
+
+	.reveal--visible.reveal-left,
+	.reveal--visible.reveal-right {
+		opacity: 1;
+		transform: scale(1);
+	}
+
 	.btn--ghost {
 		background: radial-gradient(circle at top left,
 				rgba(255, 255, 255, 0.12),
